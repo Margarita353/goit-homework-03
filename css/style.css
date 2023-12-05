@@ -1,5 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 body {
-    background-color: #FFFFFF;;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+body {
+    background-color: #FFFFFF;
     color: #434455;
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -13,10 +74,38 @@ a {
 }
 
 
+.main{
+    width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    width:1128px;
+    margin: 0 auto;
+}
+
 /* HEADER */
+.header-container {
+    display: flex;
+  }
+.header-section {
+    width: 1128px;
+    height: 72px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container-header {
+    display: flex;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 452px;
+}
 .header-logo {
-    margin-right: 76px;
-    width: 44px;
+    width: 115px;
     color:  #4D5AE5;
     font-family: Raleway, sans-serif;
     font-size: 18px;
@@ -26,8 +115,16 @@ a {
     text-transform: uppercase;
 }
 .header-logo-item {
-    width: 71px;
     color: #2E2F42;
+}
+.nav-list {
+    width: 261px;
+    display: flex;
+    gap: 40px;
+    padding-right: 332px;
+}
+.nav-list-item {
+    padding: 24px 0;
 }
 .nav-list-link{
     color: #2E2F42;
@@ -41,15 +138,23 @@ a {
     color: #404BBF;
 }
 .address {
-    font-style: normal; 
+    display: flex;
+    padding-left: 332px;
+}
+.address-list {
+    width: 346px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 .add-link-contact {
-    font-family: Roboto, sans-serif;
-    color: #434455;
+    font-family: Roboto;
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    color: #434455;
 }
 .add-link-contact:hover,
 .add-link-contact:focus {
@@ -58,28 +163,31 @@ a {
 
 
 /* SECTION-1 */
-.page-title {
+.page-title-box {
     width: 1440px;
     height: 600px;
-    background-color:  #2E2F42;
-
+    background-color: #2E2F42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .page-title-text {
-    margin: 0 auto;
-    padding-bottom: 48px;
+    width: 496px;
+    margin-bottom: 48px;
     color:  #ffffff;
     text-align: center;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    margin-bottom: 48px;
 }
 .btn {
-    display: inline-block;
     padding: 16px 32px;
-    align-items: flex-start;
-    gap: 10px;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
+    font-style: normal;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -89,15 +197,7 @@ a {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
-.btn-title {
-    color:  #ffffff;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-}
+
 .btn:hover {
     background-color: #404BBF;
 }
@@ -105,15 +205,45 @@ a {
     background-color: #404BBF;
 }
 
+
 /* SECTION-2*/
+.benefits{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 344px;
+}
+.container-text {
+    width: 264px;
+}
+.vissually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.benefits-list {
+    display: flex;
+    gap: 24px;
+}
 .benefits-title{
+    font-family: Roboto, sans-serif;
     font-weight: 500;
+    font-style: normal;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42 ;
 }
 .benefits-title-text {
+    font-family: Roboto, sans-serif ;
+    font-style: normal;
     color: #434455;
     font-size: 16px;
     font-weight: 400;
@@ -121,11 +251,24 @@ a {
     letter-spacing: 0.02em;
 }
 
+
 /* SECTION-3*/
 .team {
     background-color: #F4F4FD;
 }
+.title-box {
+    width: 1128px;
+    height: 732px;
+}
+.team-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
 .team-title {
+    padding-top: 120px;
+    padding-bottom: 72px;
     color: #2E2F42;
     text-align: center;
     font-size: 36px;
@@ -134,12 +277,22 @@ a {
     letter-spacing: 0.02em;
     text-transform: capitalize;
 }
+
 .team-list-item {
+    border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
 }
 .team-img {
     width: 264px;
     height: 260px;
+}
+.wrapper-box {
+    display: flex;
+    width: 232px;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 8px;
+    padding: 32px 0;
 }
 .team-subtitle {
     color: #2E2F42;
@@ -158,8 +311,20 @@ a {
     letter-spacing: 0.02em;
 }
 
+
 /* SECTION-4 */
+.portfolio {
+    padding: 120px 0;
+}
+.portfolio-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     gap: 24px;
+    flex-wrap: wrap;
+}
 .portfolio-title {
+    margin-bottom: 72px;
     color: #2E2F42;
     text-align: center;
     font-size: 36px;
@@ -172,6 +337,15 @@ a {
 .portfolio-img {
     width: 360px;
     height: 300px;
+}
+.portfolio-wrapper {
+    display: flex;
+    padding: 32px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
 }
 .portfolio-subtitle {
     color: #2E2F42;
@@ -188,15 +362,25 @@ a {
     letter-spacing: 0.02em;
 }
 
+
 /* FOOTER */
 .footer {
     background-color: #2E2F42;
     width: 1440px;
     height: 312px;
 }
+.footer-wrapper {
+    height:  100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .logo-footer {
+    padding-bottom: 17.5px;
+    width: 115px;
     color: #4D5AE5;
     font-family: Raleway, sans-serif;
+    font-style: normal;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.17;
@@ -207,9 +391,12 @@ a {
     color: #F4F4FD;
 }
 .footer-text {
+    width: 264px;
     color: #F4F4FD;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5; /* 150% */
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
