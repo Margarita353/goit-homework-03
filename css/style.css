@@ -128,8 +128,10 @@ a {
     width: 261px;
     display: flex;
     gap: 40px;
-    padding: 24px 0;
     padding-right: 332px;
+}
+.nav-list-item {
+    padding: 24px 0;
 }
 .nav-list-link{
     color: #2E2F42;
@@ -249,13 +251,13 @@ a {
     width: calc((100% - 72px) / 4);
 }
 .benefits-title {
+    margin-bottom: 8px;
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
     color: #2e2f42 ;
 }
 .benefits-title-text {
