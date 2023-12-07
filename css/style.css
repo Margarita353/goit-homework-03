@@ -165,11 +165,18 @@ a {
 .add-link-contact:focus {
     color: #404BBF;
 }
-
+width: 1440px;
+    background-color: #2E2F42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 /* SECTION-1 */
-.page-title-box {
+.page-title {
     padding: 188px 0;
+}
+.page-title-box {
     padding: 188px 0;
     width: 1440px;
     background-color: #2E2F42;
@@ -219,6 +226,7 @@ a {
 /* SECTION-2*/
 .benefits {
     display: flex;
+    padding: 120px 0;
 }
 .vissually-hidden {
     position: absolute;
@@ -238,7 +246,6 @@ a {
 }
 .benefits-list-item {
     width: calc((100% - 72px) / 4);
-    padding: 120px 0;
 }
 .benefits-title {
     margin-bottom: 8px;
